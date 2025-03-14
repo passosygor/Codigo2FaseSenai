@@ -2,16 +2,18 @@ import { useState } from 'react'
 import './App.css'
 import Conversao from './components/Conversao'
 import Conversao2 from './components/Conversao2'
+import Aviso from './components/Aviso'
+import AnoBissexto from './components/AnoBissexto'
 
 function App() {
   const[usuario, setUsuario] = useState("Juca")
   const [senha, setSenha] = useState()
-
-  let nome = "LeBron "
+  // função para mudar o nome
+  const[nome, setNome] = useState("Lebron")
  
   function lerNome(){
-    nome = prompt("Digite o nome (vou ignorar): ")
-    console.log(nome);
+    let respostanome = prompt("Digite o nome (vou ignorar): ")
+    setNome(respostanome)
   }
   function lerUsuario(){
     let resposta = prompt("Dgite o novo usuário:")
@@ -29,8 +31,11 @@ function App() {
 
   return (
     <>
+     <AnoBissexto />
+      <Aviso />
       <Conversao />
       <Conversao2 />
+    
 
      <h1>ESTADOS</h1>
      Nome: {nome}
