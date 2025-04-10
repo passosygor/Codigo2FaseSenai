@@ -10,7 +10,7 @@ function App() {
 
   function soma(){
 
-    numero + numero2
+    setResultado(numero + numero2)
     
     }
     
@@ -22,13 +22,13 @@ function App() {
     
     function divisao(){
       
-      numero % numero2
+     setResultado(numero % numero2)
     
     }
     
     function multiplicacao(){
     
-      numero * numero2
+     setResultado(numero * numero2)
       
     }
 
@@ -39,7 +39,7 @@ function App() {
     </div>    
 
     <div className='primeiro-input'>
-     <input type="Number" value = {numero} onChange={}/>
+     <input type="Number" value = {numero} onChange={setNumero}/>
      </div>
 
      <div className='sinais'> 
@@ -50,7 +50,7 @@ function App() {
      </div>
 
       <div className='segundo-input'>
-     <input type="Number" value={numero2}/>
+     <input type="Number" value={numero2} onChange={setNumero2}/>
      </div>
      
 
