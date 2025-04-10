@@ -10,7 +10,7 @@ function App() {
 
   function soma(){
 
-    setResultado(numero + numero2)
+    setResultado(Number(numero) + Number(numero2)) 
     
     }
     
@@ -22,7 +22,7 @@ function App() {
     
     function divisao(){
       
-     setResultado(numero % numero2)
+     setResultado(numero / numero2)
     
     }
     
@@ -32,30 +32,46 @@ function App() {
       
     }
 
+    function limpar(){
+
+      setResultado("")
+      
+
+    }
+
   return (
     <>
+    <div className='container'>
+
     <div className='parte-cima'>
     <h1>Calculadeira</h1>
-    </div>    
+    Faça a conta desejada
+    </div>  
 
-    <div className='primeiro-input'>
-     <input type="Number" value = {numero} onChange={setNumero}/>
-     </div>
+    <div className='parte-meio'>  
 
+    
+     <input type="Number" value = {numero} onChange={(event) => setNumero (event.target.value)}/>
+     
      <div className='sinais'> 
      <button onClick={soma}>+</button>
      <button onClick={subtracao}>-</button>
      <button onClick={divisao}>%</button>
      <button onClick={multiplicacao}>x</button>
+     <button onClick={limpar}>Limpar</button>
      </div>
 
-      <div className='segundo-input'>
-     <input type="Number" value={numero2} onChange={setNumero2}/>
-     </div>
+   
+     <input type="Number" value={numero2} onChange={(event) => setNumero2 (event.target.value)}/>
      
+
+     </div>
+    
 
      <div className='resultado'>
       {resultado}
+     </div>
+
      </div>
 
     </>
