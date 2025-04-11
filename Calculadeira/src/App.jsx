@@ -35,6 +35,8 @@ function App() {
     function limpar(){
 
       setResultado("")
+      setNumero("")
+      setNumero2("")
       
 
     }
@@ -58,7 +60,7 @@ function App() {
      <button onClick={subtracao}>-</button>
      <button onClick={divisao}>%</button>
      <button onClick={multiplicacao}>x</button>
-     <button onClick={limpar}>Limpar</button>
+     <button onClick={limpar}>🗑️</button>
      </div>
 
    
@@ -69,7 +71,7 @@ function App() {
     
 
      <div className='resultado'>
-      {resultado}
+      = {resultado}
      </div>
 
      </div>
