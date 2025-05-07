@@ -1,0 +1,43 @@
+.body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-central{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 50vh;
+width: 40vw;
+border: solid;
+}
+
+.div-input{
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.div-cima{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+.botao-credito{
+background-color: green;
+}
+
+.botao-debito{
+background-color: red;
+}
+
+.botoes{
+  padding: 5px;
+  
+}
